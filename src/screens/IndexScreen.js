@@ -7,10 +7,9 @@ import { AntDesign } from '@expo/vector-icons';
 // import BlogContext from '../context/BlogContext';
 
 const IndexScreen = ({ navigation }) => {
-    const {state, addBlogPost, deleteBlogPost } = useContext(Context)
+    const {state, deleteBlogPost } = useContext(Context)
     return (
         <View>
-            <Button title='Add Post' onPress={addBlogPost} />
             <FlatList 
             data={state}
             keyExtractor={(blogPost)=>blogPost.title}
@@ -36,7 +35,7 @@ IndexScreen.navigationOptions = ({ navigation }) => {
     return {
          headerRight: () => (
          <TouchableOpacity onPress={() => navigation.navigate('Create')}>
-             <AntDesign name="pluscircleo" size={30} />
+             <AntDesign style={{color:'purple', paddingRight: 10}} name="pluscircleo" size={30} />
              </TouchableOpacity>
              )
     };
