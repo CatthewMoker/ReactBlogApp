@@ -20,7 +20,7 @@ ShowScreen.navigationOptions = ({ navigation }) => {
             onPress={() => 
             navigation.navigate('Edit', { id: navigation.getParam('id') 
         })}>
-            <FontAwesome name="pencil" size={24} color="black" />
+            <FontAwesome style={{paddingHorizontal:10}} name="pencil" size={24} color="black" />
             </TouchableOpacity>
             )
    };
