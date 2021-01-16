@@ -1,5 +1,6 @@
-import axios from 'axios';
+import axios from "axios";
+import Constants from "expo-constants";
 
 export default axios.create({
-    baseURL: ''
+  baseURL: Constants.manifest.baseURL,
 });
